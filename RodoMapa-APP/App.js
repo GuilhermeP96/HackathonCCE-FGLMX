@@ -78,6 +78,7 @@ export default class App extends React.Component {
             size={GoogleSigninButton.Size.Wide}
             color={GoogleSigninButton.Color.Dark}
             onPress={this._signIn}
+            Text="teste"
           />
           <TouchableOpacity style={styles.criarConta}>
             <Text style={styles.botaoCriarConta}>Criar uma conta agora</Text>
@@ -108,16 +109,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
     width: 300,
     height: 45,
-    backgroundColor: '#35AAFF',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 18,
-  },
-  botaoGoogle: {
-    marginTop: 20,
-    width: 300,
-    height: 45,
-    backgroundColor: '#35AAFF',
+    backgroundColor: 'rgb(182,143,39)',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 18,
@@ -137,15 +129,15 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   imagemLogo: {
-    height: 300,
+    height: 270,
     width: 500,
   },
-  logoGoogle: {
-    height: 35,
-    width: 35,
-  },
   botaoLoginGoogle: {
-    width: 192,
+    marginTop: 20,
+    width: 312,
     height: 48,
-  }
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 28,
+  },
 });

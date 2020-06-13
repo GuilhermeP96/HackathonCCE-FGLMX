@@ -12,8 +12,7 @@
   "dependencies": {
     "@react-native-community/google-signin": "^4.0.3",
     "react": "16.11.0",
-    "react-native": "0.62.2",
-    "react-native-google-signin": "^2.1.1"
+    "react-native": "0.62.2"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
