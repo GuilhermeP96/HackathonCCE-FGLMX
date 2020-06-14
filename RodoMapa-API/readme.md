@@ -63,3 +63,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Banco de dados
+
+Rodar o initDB.sql na pasta DB, depois editar o .env na raiz da API para as configs do banco implantado e na sequência rodar no PHP Server:
+
+php artisan migrate
+
+php artisan db:seed --class=UsersTableSeeder
