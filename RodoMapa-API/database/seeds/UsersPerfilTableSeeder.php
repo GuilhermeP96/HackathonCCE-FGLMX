@@ -24,5 +24,9 @@ class UsersPerfilTableSeeder extends Seeder
         factory(App\Models\UserPerfil::class)->create([
             'ds_descricao' => 'Administrador',
         ]);
+        factory(App\Models\UserPerfil::class)->create([
+            'ds_descricao' => 'Usuário',
+        ]);
+
     }
 }

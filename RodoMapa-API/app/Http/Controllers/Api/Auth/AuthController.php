@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -15,7 +17,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login']]);
+        $this->middleware('auth:api', ['except' => ['login', 'create']]);
     }
 
     /**
@@ -32,6 +34,39 @@ class AuthController extends Controller
         }
 
         return $this->respondWithToken($token);
+    }
+
+    public function create(Request $request){
+        extract($request->all());
+        $documento = isset($documento) ? str_replace([".","/","-"], "", $documento): '';
+        if(!empty($name) && !empty($email) && !empty($password) && strlen($documento)>0)
+        {
+            $verificaUsuario = User::where('email',$email)->where('ic_excluido',1)->first();
+            if(empty($verificaUsuario->email))
+            {
+                User::create([
+                    'cd_perfil' => 5,
+                    'name' => $name,
+                    'email' => $email,
+                    'password' => Hash::make($password),
+                    'nr_documento' => $documento
+                ]);
+            }
+            else return response()->json([
+                'sucesso' => 0,
+                'mensagem' => 'Usuário já cadastrado.'
+            ], 200);
+            return response()->json([
+                'sucesso' => 1,
+                'mensagem' => 'Usuário cadastrado com sucesso.'
+            ], 200);
+        }
+        else return response()->json(
+            [
+                'sucesso' => 0,
+                'mensagem' => 'Não foi informado todos os parametros obrigatórios'
+            ], 200);
+        
     }
 
     /**
