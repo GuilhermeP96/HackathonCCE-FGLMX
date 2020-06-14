@@ -6,5 +6,4 @@ show tables;
 
 SELECT * FROM users_perfil;
 
-SELECT * FROM users
-
+SELECT * FROM users;
