@@ -19,7 +19,7 @@ import {
 export class IniciaViagemPage implements OnInit {
 
   map: GoogleMap;
-  public scooters: any = [];
+  public dados: any = {};
 
   constructor() { }
 
@@ -29,8 +29,8 @@ export class IniciaViagemPage implements OnInit {
 
   loadMap(latitude, longitude) {
     Environment.setEnv({
-      'API_KEY_FOR_BROWSER_RELEASE': 'AIzaSyDCa9ZS5MSp3z4zRCS59pQuT9XTu-zB3gw',
-      'API_KEY_FOR_BROWSER_DEBUG': 'AIzaSyDCa9ZS5MSp3z4zRCS59pQuT9XTu-zB3gw'
+      'API_KEY_FOR_BROWSER_RELEASE': 'AIzaSyATfhOTs0X1l9bP5wy56kH1kfNNx_pgUcs',
+      'API_KEY_FOR_BROWSER_DEBUG': 'AIzaSyATfhOTs0X1l9bP5wy56kH1kfNNx_pgUcs'
     });
 
     let mapOptions: GoogleMapOptions = {
