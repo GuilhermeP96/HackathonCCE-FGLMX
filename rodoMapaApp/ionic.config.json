@@ -1,5 +1,7 @@
 {
   "name": "rodoMapaApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
