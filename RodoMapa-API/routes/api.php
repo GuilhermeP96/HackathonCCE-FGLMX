@@ -13,10 +13,16 @@ use Illuminate\Http\Request;
 |
 */
 
-
-//Route::post('login', ['middleware' => 'cors', function(){
-Route::post('login','Api\\Auth\\AuthController@login')->middleware(['cors'])->name('login');
-//}]);
+Route::get('/', function(){
+    return 'API em operação';
+});
+Route::group([
+    'prefix' => 'login',
+    'middleware' => ['cors'],
+], function ($router) {
+    Route::post('/','Api\\Auth\\AuthController@login');
+    Route::post('/cadastrar','Api\\Auth\\AuthController@create');
+});
 
 Route::group([
 

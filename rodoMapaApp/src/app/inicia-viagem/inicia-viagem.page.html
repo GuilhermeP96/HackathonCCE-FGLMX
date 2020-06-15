@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>inicia viagem</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid id="map_canvas">
+    <ion-row style="width: 100%;height:100px;background-color: #fff;">
+      <form>
+        <ion-input placeholder="Ponto inicial" [(ngModel)]="dados.pontoInicial" name="pontoInicial"></ion-input>
+        <ion-input placeholder="Ponto final" [(ngModel)]="dados.pontoFinal" name="pontoFinal"></ion-input>
+        <ion-col size="10" style="justify-content: center;display: flex;">
+          <ion-button style="width: 65%;margin-left: 20%;" class="ion-text-uppercase btn-default-two" (click)="iniciar()"> Iniciar </ion-button>
+        </ion-col>
+      </form>
+    </ion-row>
+  </ion-grid>
+</ion-content>

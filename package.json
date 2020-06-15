@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@react-native-community/google-signin": "^4.0.3",
+    "react-native-google-signin": "^2.1.1"
+  }
+}
