@@ -60,4 +60,8 @@ export class IniciaViagemPage implements OnInit {
     });
   }
 
+  iniciar(){
+    console.log(this.dados);
+  }
 }
+
