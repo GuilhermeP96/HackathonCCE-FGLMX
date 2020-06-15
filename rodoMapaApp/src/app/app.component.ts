@@ -14,27 +14,27 @@ export class AppComponent implements OnInit {
   public appPages = [
     {
       title: 'Iniciar nova viagem',
-      url: '/folder/Inbox',
+      url: '/inicia-viagem',
       icon: 'mail'
     },
     {
       title: 'Abrir viagem salva',
-      url: '/folder/Outbox',
+      url: '/abrir-viagem',
       icon: 'paper-plane'
     },
     {
       title: 'Meus locais',
-      url: '/folder/Favorites',
+      url: '/meus-locais',
       icon: 'heart'
     },
     {
       title: 'Notificaçōes',
-      url: '/folder/Archived',
+      url: '/notificacoes',
       icon: 'archive'
     },
     {
       title: 'Contatos de Emergência',
-      url: '/folder/Trash',
+      url: '/contatos-de-emergencia',
       icon: 'trash'
     },
   ];
