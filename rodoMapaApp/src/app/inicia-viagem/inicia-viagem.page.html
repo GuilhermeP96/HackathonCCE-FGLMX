@@ -5,5 +5,19 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-grid id="map_canvas">
+    <ion-row style="width: 100%;">
+      <ion-col size="10" style="justify-content: center;display: flex;">
+        <ion-button style="width: 65%;margin-left: 20%;" class="ion-text-uppercase btn-default-two" (click)="scan()">
+          <img src="/assets/icon-scan.png" alt="" width="22" class="margin-right-percentage-5">
+          Escanear
+        </ion-button>
+      </ion-col>
+      <ion-col style="display: flex;" size="2">
+        <ion-button class="btn-default-two" style="width: 100%;" style="margin-left:auto;">
+          <img src="/assets/icon-gps.png" alt="" width="50">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
